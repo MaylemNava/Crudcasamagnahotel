@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="../static/style/habitaciones.css">
+    <link rel="icon" href="../static/img/Gold Luxury Real Estate Agency Logo.png">
+
+<head>
+    <title>Casa Magna Hotel</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header >
+        <div class="container-logo">
+            <img src="../static/img/Gold Luxury Real Estate Agency Logo.png" alt="logo hotel">
+        </div>
+        <nav class="barra-nav" id="nav-links">
+            <!-- LINKS -->
+            <ul class="lista-nav">
+                <li><a href="../templates/index.html" class="links">Inicio</a></li>
+                <li><a href="../templates/Galerias.html" class="links">Galeria</a></li>
+                <li><a href="../templates/Eventos.html" class="links">Eventos</a></li>
+                <li><a href="../templates/ContactoBootstrap.html" class="links">Contacto</a></li>
+            </ul>
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="barras" name="menu-outline"></ion-icon>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div id="app" class="container">
+            <br>
+            <h1>Habitaciones</h1>
+            
+            <a class="btn btn-primary" href="../templates/habitacion_nuevo.html">Nuevo</a>
+
+            <section v-if="error">Lo sentimos se produjo un error</section>
+            <section v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+
+                </section>
+                <section v-else>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Habitacion</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Stock</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="habitacion in habitaciones" class="">
+                                    <td scope="row">{{habitacion.id}}</td>
+                                    <td>{{habitacion.nombre}}</td>
+                                    <td>{{habitacion.precio}}</td>
+                                    <td>{{habitacion.stock}}</td>
+                                    <td>
+                                        <img width="500" :src="habitacion.imagen" :alt="habitacion.nombre">
+
+
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(habitacion.id)"    >Eliminar</button>
+                                        
+                                        <a class="btn btn-primary" :href="'habitacion_editar.html?id='+ habitacion.id+'&nombre=' +habitacion.nombre+ '&precio='+habitacion.precio+'&stock='+habitacion.stock +  '&imagen='+habitacion.imagen" >Editar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+        </div>
+        
+    </main>
+    <footer>
+        
+         
+      
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="../static/Js/main.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="../static/Js/habitaciones.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="../static/js/MenuHam.js"></script>
+    <script src="../static/ruta_al_archivo/app.js"></script>
+
+</body>
+
+</html>

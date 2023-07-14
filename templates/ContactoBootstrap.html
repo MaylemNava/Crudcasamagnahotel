@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="hotel, hoteles, viaje, reservas, vacaciones, relax, descanso travel, vacations">
+    <meta name="descripcion" content="reserva de hotel, vacaciones, descanso">
+    <link rel="icon" href="../static/img/Gold Luxury Real Estate Agency Logo.png">
+    <link rel="stylesheet" href="../static/style/Contacto.css">
+    <title>Contacto Casa Magna Hotel</title>
+
+</head>
+  <!--
+    ../templates/
+    ../static/
+
+-->
+  <header>
+        <div class="container-logo">
+            <img src="../static/img/Gold Luxury Real Estate Agency Logo.png" alt="logo hotel">
+        </div>
+        <nav class="barra-nav" id="nav-links">
+
+            <!-- LINKS -->
+            <ul class="lista-nav">
+                <li><a href="../templates/index.html" class="links">Inicio</a></li>
+                <li ><a href="../templates/Galerias.html" class="links">Galeria</a></li>
+                <li><a href="../templates/Eventos.html" class="links">Eventos</a></li>
+               <!--  <li ><a href="" class="links">Contacto</a></li>-->
+                <li ><a href="../templates/Habitaciones1.html">Habitaciones</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="barras" name="menu-outline"></ion-icon>
+        </button>
+        </nav>
+    </header>
+
+    <div class="separacion">
+        <hr>
+    </div>
+    <div class="container-titulo">
+        <div class="titulo">
+            <h1>CONTACTO</h1>
+        </div>
+    </div>
+    <div class="separacion">
+        <hr>
+    </div>
+
+<body>
+    <form id="form" class="formulario" action="https://formspree.io/f/meqwwegn"
+    method="POST">
+        <label for="nombre"></label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+        <label for="email"></label>
+        <input type="email" name="email" id="email" required placeholder="Email">
+        <label for="texto-campo"></label>
+        <textarea name="texto-campo" id="texto" placeholder="Mensaje" cols="30" rows="10"></textarea>
+        <input type="submit" name="enviar" id="enviar" value="Enviar" class="boton-enviar">
+    </form>
+
+<footer>
+    <div class="redes-sociales">
+        <p> <b>Visita nuestras redes sociales</b></p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/img/Iconos redes/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/img/Iconos redes/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://web.whatsapp.com/" target="_blank"><img src="../static/img/Iconos redes/whatsapp.png" alt="Whatsapp">
+        </a>
+        <p>&#169; 2013 Codo a Codo</p>
+    </div>
+</footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="../static/js/MenuHam.js"></script>
+    <script src="../static/Js/ValidacionForm.js"></script>
+</body>
+</html>
