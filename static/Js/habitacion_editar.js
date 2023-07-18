@@ -43,7 +43,7 @@ function modificar() {
         .then(function () {
             console.log("modificado")
             alert("Registro modificado")
-            window.location.href = "./templates/habitaciones.html";  
+            window.location.href = "./habitaciones.html";  
         //NUEVO,  si les da error el fetch  comentar esta linea que puede dar error  
         })
         .catch(err => {
